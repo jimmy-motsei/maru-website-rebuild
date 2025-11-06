@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "legacy:sync": "node scripts/sync-legacy-assets.mjs || true",
+    "legacy:mdx": "node scripts/migrate-html-to-mdx.mjs"
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
