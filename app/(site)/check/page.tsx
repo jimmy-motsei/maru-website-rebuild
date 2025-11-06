@@ -1,17 +1,20 @@
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { getMdxBySlug, listPageSlugs } from "@/lib/mdx";
+import Image from "next/image";
 
-export async function generateStaticParams() {
-  const slugs = await listPageSlugs();
-  return slugs.map((slug) => ({ slug }));
-}
-
-export default async function Page({ params }: { params: { slug: string[] } }) {
-  const { mdx, meta } = await getMdxBySlug(params.slug);
+export default function Check() {
   return (
-    <article className="prose prose-invert max-w-3xl">
-      <h1>{meta.title ?? params.slug.at(-1)}</h1>
-      <MDXRemote source={mdx.compiledSource} />
-    </article>
+    <main className="py-16">
+      <h1 className="text-3xl font-bold">Asset check</h1>
+      <p className="mt-2 opacity-70">If you see an image below, assets & routing are good.</p>
+      <div className="mt-6">
+        <Image
+          src="/images/partners/heb_bw_logo.png"  // swap to any real file under /public/images
+          alt="Sanity check"
+          width={800}
+          height={400}
+          className="rounded-xl"
+          priority
+        />
+      </div>
+    </main>
   );
 }
