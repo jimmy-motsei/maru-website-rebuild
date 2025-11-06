@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global tokens */
+:root { --radius: 16px; }
+
+/* Dark baseline */
+html { color-scheme: dark; }
+body { @apply bg-black text-white antialiased; }
+
+/* Optional: invert prose */
+.prose { @apply prose-invert; }
