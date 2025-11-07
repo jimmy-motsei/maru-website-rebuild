@@ -1,0 +1,2 @@
+.prose { @apply prose-slate max-w-none; }
+.prose h2, .prose h3 { @apply scroll-mt-24; }

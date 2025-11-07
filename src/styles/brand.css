@@ -1,0 +1,19 @@
+:root {
+  --brand-bg: 255 255 255;
+  --brand-text: 15 23 42;
+  --brand-muted: 100 116 139;
+  --brand-border: 226 232 240;
+  --brand-accent: 61 184 198;
+  --brand-accent-fore: 15 23 42;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --brand-bg: 10 10 10;
+    --brand-text: 241 245 249;
+    --brand-muted: 148 163 184;
+    --brand-border: 30 41 59;
+    --brand-accent: 61 184 198;
+    --brand-accent-fore: 15 23 42;
+  }
+}
