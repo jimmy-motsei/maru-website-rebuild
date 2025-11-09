@@ -27,13 +27,13 @@ export default function Feature({
   )
 
   const Visual = image ? (
-    <div className="rounded-2xl overflow-hidden border border-brand-border">
+    <div className="rounded-2xl overflow-hidden">
       <Image
         src={image.src}
         alt={image.alt}
         width={image.width ?? 1200}
         height={image.height ?? 800}
-        className="h-64 md:h-80 w-full object-cover"
+        className="h-64 md:h-80 w-full object-cover edge-fade"
         sizes="(min-width: 768px) 50vw, 100vw"
         priority={false}
       />
@@ -43,7 +43,7 @@ export default function Feature({
   )
 
   return (
-    <section className="container py-12">
+    <section className="section">
       <div className={`grid gap-8 md:grid-cols-2 items-center ${align==="right" ? "md:[&>*:first-child]:order-2" : ""}`}>
         {Text}
         {Visual}

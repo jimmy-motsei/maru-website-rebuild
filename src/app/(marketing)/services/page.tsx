@@ -6,69 +6,73 @@ import CTAJoin from "@/components/sections/services/CTAJoin"
 import FAQ from "@/components/sections/services/FAQ"
 import IconsRow from "@/components/sections/services/IconsRow"
 
+export const metadata = {
+  title: "Services — Maru AI Automation",
+  description: "We design, build and ship AI automations that cut costs and unlock growth."
+}
+
 export default function Page(){
   return (
     <>
       <ServiceHero />
       <PartnerStrip />
       <StatsStrip />
+
       <Feature
         title="Sales & Marketing Process Automation"
-        lead="Automate lead capture, qualification, routing and follow-ups to increase pipeline velocity and conversion."
+        lead="Capture, qualify and follow up automatically to grow pipeline velocity and conversion."
         bullets={[
           "Instant lead enrichment and scoring",
-          "Auto-personalised outreach and reminders",
-          "CRM hygiene and reporting that stays up-to-date"
+          "Personalised outreach and reminders",
+          "Clean CRM data and reliable reporting"
         ]}
+        image={{ src: "/images/services/ai-marketing-sales.png", alt: "Sales and marketing automation strategy on a whiteboard" }}
         cta={{ href: "/request-demo", label: "See a quick demo" }}
         align="left"
       />
+
       <Feature
-        title="Certified Airtable Experts"
-        lead="From schema to scripts, we design Airtable as a reliable source-of-truth that your teams enjoy using."
+        title="Workflow Optimisation"
+        lead="Map bottlenecks, standardise handoffs and automate routine steps across teams."
         bullets={[
-          "Relational schema design for real-world ops",
-          "Interfaces that teams actually adopt",
-          "Automations and scripting for complex flows"
+          "Process discovery and redesign",
+          "Human-in-the-loop approvals",
+          "Audit trails and observability"
         ]}
-        cta={{ href: "/solutions/ready-to-deploy", label: "Explore ready-to-deploy" }}
+        image={{ src: "/images/services/ai-workflow-optimisation.png", alt: "Team reviewing workflow optimisation on whiteboard" }}
+        cta={{ href: "/contact", label: "Request a process health check" }}
         align="right"
       />
+
+      <Feature
+        title="Operational Dashboards & Reporting"
+        lead="Live visibility on throughput, SLAs and exceptions so you can act quickly."
+        bullets={[
+          "Role-based dashboards your team understands",
+          "Auto-updated KPIs and alerts",
+          "Data pipeline and governance baked in"
+        ]}
+        image={{ src: "/images/services/ai-dashboard-analytics.png", alt: "Ops team reviewing analytics dashboards" }}
+        cta={{ href: "/contact", label: "Talk to an expert" }}
+        align="left"
+      />
+
       <Feature
         title="Custom AI Assistants"
         lead="Agentic workflows and chat assistants that plug into your tools and deliver measurable outcomes."
         bullets={[
-          "Knowledge ingestion and safe prompts",
-          "Task orchestration with observability",
-          "Human-in-the-loop where it counts"
+          "Knowledge ingestion and safe prompting",
+          "Task orchestration across apps",
+          "Measurable outcomes, not demos"
         ]}
-        cta={{ href: "/solutions/custom-ai", label: "Custom solutions" }}
-        align="left"
-      />
-      <Feature
-        title="Job Tracking Automation"
-        lead="Replace spreadsheets and manual updates with reliable, auditable workflows."
-        bullets={[
-          "Automated status updates and notifications",
-          "Role-based views your team understands",
-          "Analytics that show bottlenecks fast"
-        ]}
-        cta={{ href: "/contact", label: "Talk to an expert" }}
+        image={{ src: "/images/services/ai-chatbot-assistant.png", alt: "Custom AI assistant running on a mobile device" }}
+        cta={{ href: "/solutions/custom-ai", label: "Explore custom solutions" }}
         align="right"
       />
+
       <CTAJoin />
       <FAQ />
       <IconsRow />
-      <section className="container py-16 text-center">
-        <div className="rounded-2xl border border-brand-border p-10 bg-[linear-gradient(135deg,rgba(61,184,198,.08),transparent)]">
-          <h3 className="text-2xl md:text-3xl font-semibold">Create. Automate. Thrive.</h3>
-          <p className="mt-2 text-brand-muted">Start a pilot this month and see results in weeks.</p>
-          <div className="mt-6 inline-flex gap-3">
-            <a href="/request-demo" className="rounded-xl bg-brand-accent text-brand-accent-fore px-5 py-3 font-medium">Get started</a>
-            <a href="/contact" className="rounded-xl border border-brand-border px-5 py-3">Contact us</a>
-          </div>
-        </div>
-      </section>
     </>
   )
 }

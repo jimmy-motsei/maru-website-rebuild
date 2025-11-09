@@ -7,8 +7,13 @@ import Footer from "@/components/layout/Footer"
 const body = Inter({ subsets: ["latin"], display: "swap", variable: "--font-sans" })
 
 export const metadata: Metadata = {
-  title: { default: "Maru — AI Automation & Consulting", template: "%s · Maru" },
-  description: "We design, build and ship AI automations that cut costs and unlock growth.",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
+  title: "Maru Online — AI Automation for South African B2B",
+  description:
+    "Go-to AI consultancy for SA B2B. WhatsApp AI, Sales Automation, Office Ops, and Advisory.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: [
       { url: "/favicons/icon-192.png", sizes: "192x192", type: "image/png" },
@@ -20,16 +25,18 @@ export const metadata: Metadata = {
   },
   manifest: "/favicons/site.webmanifest",
   openGraph: {
-    title: "Maru — AI Automation & Consulting",
-    description: "We design, build and ship AI automations that cut costs and unlock growth.",
+    title: "Maru Online — AI Automation for South African B2B",
+    description:
+      "Go-to AI consultancy for SA B2B. WhatsApp AI, Sales Automation, Office Ops, and Advisory.",
     type: "website",
-    url: "https://example.com",
+    url: "/",
     images: [{ url: "/og/default.png", width: 1200, height: 630 }]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Maru — AI Automation & Consulting",
-    description: "We design, build and ship AI automations that cut costs and unlock growth.",
+    title: "Maru Online — AI Automation for South African B2B",
+    description:
+      "Go-to AI consultancy for SA B2B. WhatsApp AI, Sales Automation, Office Ops, and Advisory.",
     images: ["/og/default.png"]
   }
 }

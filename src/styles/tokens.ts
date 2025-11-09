@@ -1,7 +1,7 @@
 export const tokens = {
   colors: {
     brand: "#0B0B0B",
-    accent: "#00D3A7",
+    accent: "#10B981",
     muted: "#6B7280",
     border: "#E5E7EB",
   },

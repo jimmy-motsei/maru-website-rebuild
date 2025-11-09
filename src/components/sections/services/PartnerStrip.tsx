@@ -1,16 +1,19 @@
+const items = [
+  { name: "OpenAI",  logo: "/images/ecosystem/openai.svg" },
+  { name: "HubSpot", logo: "/images/ecosystem/hubspot.svg" },
+  { name: "GitHub",  logo: "/images/ecosystem/github.svg" },
+  { name: "Zapier",  logo: "/images/ecosystem/zapier.svg" },
+  { name: "Notion",  logo: "/images/ecosystem/notion.svg" },
+  { name: "Meta",    logo: "/images/ecosystem/meta.svg" }
+]
+
 export default function PartnerStrip(){
-  const items = [
-    { name: "Airtable", logo: "/images/partners/airtable_logo.png" },
-    { name: "Zapier", logo: "/images/partners/zapier_bw_logo.png" },
-    { name: "Make", logo: "/images/partners/make_bw_logo.png" },
-    { name: "OpenAI", logo: "/images/partners/openai_bw_logo.png" }
-  ]
   return (
     <section className="border-y border-brand-border bg-black/20">
-      <div className="container py-8 grid grid-cols-2 sm:grid-cols-4 items-center gap-6 opacity-80">
+      <div className="container py-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
         {items.map(i=>(
-          <div key={i.name} className="flex items-center justify-center">
-            <img src={i.logo} alt={i.name} className="h-6 opacity-70" />
+          <div key={i.name} className="flex items-center justify-center opacity-80 hover:opacity-100 transition-opacity">
+            <img src={i.logo} alt={i.name} className="h-6 w-auto grayscale contrast-125" />
           </div>
         ))}
       </div>
