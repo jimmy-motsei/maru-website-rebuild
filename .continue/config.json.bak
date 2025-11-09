@@ -1,0 +1,20 @@
+{
+  "title": "Maru Website Rebuild — Local",
+  "models": [
+    {
+      "name": "Local Llama",
+      "provider": "ollama",
+      "baseUrl": "http://localhost:11434",
+      "model": "llama3.1:8b",
+      "default": true,
+      "temperature": 0.2,
+      "numCtx": 8192
+    }
+  ],
+  "embeddings": {
+    "provider": "ollama",
+    "baseUrl": "http://localhost:11434",
+    "model": "nomic-embed-text"
+  },
+  "allowAnonymousTelemetry": false
+}

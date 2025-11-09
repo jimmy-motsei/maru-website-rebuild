@@ -20,7 +20,7 @@
 @tailwind utilities;
 
 body {
-  height: 100%;got st
+  height: 100%;
 }
 body {
   background-color: rgb(var(--bg));
